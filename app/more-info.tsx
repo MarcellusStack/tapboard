@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { H1, ScrollView, Text, YStack } from "tamagui";
+import { ScrollView, Text, YStack } from "tamagui";
+import { Heading } from "../components/Heading";
 
 export default function MoreInfoScreen() {
   return (
@@ -17,15 +18,7 @@ export default function MoreInfoScreen() {
       >
         {/* Header */}
         <YStack alignItems="flex-start" gap="$4">
-          <H1
-            fontSize="$6"
-            fontWeight="bold"
-            lineHeight="$8"
-            color="$color"
-            textAlign="left"
-          >
-            Features & Roadmap
-          </H1>
+          <Heading headingSize="lg">Features & Roadmap</Heading>
         </YStack>
 
         {/* Roadmap */}
@@ -38,9 +31,9 @@ export default function MoreInfoScreen() {
               backgroundColor="$green2"
               borderRadius="$4"
             >
-              <Text fontSize="$5" fontWeight="600" color="$green11">
+              <Heading headingSize="md" color="$green11">
                 Implemented
-              </Text>
+              </Heading>
               <YStack gap="$2">
                 <Text fontSize="$3" color="$green11">
                   • Basic one-tap habit tracking
@@ -61,9 +54,9 @@ export default function MoreInfoScreen() {
               backgroundColor="$yellow2"
               borderRadius="$4"
             >
-              <Text fontSize="$5" fontWeight="600" color="$yellow11">
+              <Heading headingSize="md" color="$yellow11">
                 Planned
-              </Text>
+              </Heading>
               <YStack gap="$2">
                 <Text fontSize="$3" color="$yellow11">
                   • Custom tracker themes & colors
@@ -108,9 +101,9 @@ export default function MoreInfoScreen() {
               backgroundColor="$white2"
               borderRadius="$4"
             >
-              <Text fontSize="$5" fontWeight="600" color="$white11">
+              <Heading headingSize="md" color="$white11">
                 In the Future
-              </Text>
+              </Heading>
               <YStack gap="$2">
                 <Text fontSize="$3" color="$white11">
                   • Advanced AI-powered habit recommendations

@@ -2,9 +2,10 @@ import { Link } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { Image } from "react-native";
-import { H1, Paragraph, ScrollView, useTheme, XStack, YStack } from "tamagui";
+import { Paragraph, ScrollView, useTheme, XStack, YStack } from "tamagui";
 import { Badge } from "../components/Badge";
 import { Button } from "../components/Button";
+import { Heading } from "../components/Heading";
 
 export default function HomeScreen() {
   const theme = useTheme();
@@ -51,9 +52,9 @@ export default function HomeScreen() {
 
         {/* Description */}
         <YStack gap="$3" alignItems="center">
-          <H1 fontSize="$9" fontWeight="bold" color="$color" textAlign="center">
+          <Heading headingSize="xl" textAlign="center">
             TapBoard
-          </H1>
+          </Heading>
           <Paragraph
             fontSize="$5"
             color="$color"
