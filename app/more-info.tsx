@@ -16,13 +16,13 @@ export default function MoreInfoScreen() {
         width="100%"
       >
         {/* Header */}
-        <YStack alignItems="center" gap="$4">
+        <YStack alignItems="flex-start" gap="$4">
           <H1
-            fontSize="$9"
+            fontSize="$6"
             fontWeight="bold"
             lineHeight="$8"
             color="$color"
-            textAlign="center"
+            textAlign="left"
           >
             Features & Roadmap
           </H1>

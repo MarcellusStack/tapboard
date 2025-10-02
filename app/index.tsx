@@ -61,7 +61,7 @@ export default function HomeScreen() {
             lineHeight={24}
             maxWidth={400}
           >
-            TapBoard is the fastest way to track anything in your life.
+            Track anything with taps, photos, counts, ratings, and more.
           </Paragraph>
 
           {/* Feature Badges */}
@@ -83,13 +83,12 @@ export default function HomeScreen() {
         {/* Action Buttons */}
         <YStack gap="$3" width="100%" maxWidth={300} marginTop="$6">
           <Link href="/(tabs)" asChild>
-            <Button variant="filled" size="sm" fullWidth>
+            <Button variant="filled" buttonSize="md" fullWidth>
               Get Started
             </Button>
           </Link>
-
           <Link href="/more-info" asChild>
-            <Button variant="outlined" size="lg" fullWidth>
+            <Button variant="outlined" buttonSize="md" fullWidth>
               Learn More
             </Button>
           </Link>

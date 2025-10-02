@@ -1,4 +1,5 @@
-import { styled, Button as TamaguiButton } from "tamagui";
+import React from "react";
+import { Button as TamaguiButton, styled } from "tamagui";
 
 const ButtonContainer = styled(TamaguiButton, {
   name: "Button",
@@ -22,13 +23,11 @@ const ButtonContainer = styled(TamaguiButton, {
         backgroundColor: "$green10",
         color: "white",
         borderWidth: 0,
-        pressStyle: {
-          backgroundColor: "$green9",
-          opacity: 0.9,
-        },
         hoverStyle: {
           backgroundColor: "$green11",
-          opacity: 0.9,
+        },
+        pressStyle: {
+          backgroundColor: "$green9",
         },
         focusStyle: {
           backgroundColor: "$green10",
@@ -42,13 +41,13 @@ const ButtonContainer = styled(TamaguiButton, {
         color: "$green10",
         borderWidth: 1,
         borderColor: "$green10",
-        pressStyle: {
-          backgroundColor: "$backgroundHover",
-          borderColor: "$green9",
-        },
         hoverStyle: {
-          backgroundColor: "$backgroundPress",
+          backgroundColor: "$green2",
           borderColor: "$green11",
+        },
+        pressStyle: {
+          backgroundColor: "$green3",
+          borderColor: "$green9",
         },
         focusStyle: {
           backgroundColor: "transparent",
@@ -62,13 +61,11 @@ const ButtonContainer = styled(TamaguiButton, {
         backgroundColor: "$green2",
         color: "$green11",
         borderWidth: 0,
-        pressStyle: {
-          backgroundColor: "$green3",
-          opacity: 0.9,
-        },
         hoverStyle: {
           backgroundColor: "$green3",
-          opacity: 0.9,
+        },
+        pressStyle: {
+          backgroundColor: "$green4",
         },
         focusStyle: {
           backgroundColor: "$green2",
@@ -81,11 +78,11 @@ const ButtonContainer = styled(TamaguiButton, {
         backgroundColor: "transparent",
         color: "$green10",
         borderWidth: 0,
-        pressStyle: {
+        hoverStyle: {
           backgroundColor: "$green2",
         },
-        hoverStyle: {
-          backgroundColor: "transparent",
+        pressStyle: {
+          backgroundColor: "$green3",
         },
         focusStyle: {
           backgroundColor: "transparent",
@@ -95,17 +92,20 @@ const ButtonContainer = styled(TamaguiButton, {
         },
       },
     },
-    size: {
+    buttonSize: {
       sm: {
-        size: "$3",
+        height: "$3",
+        paddingHorizontal: "$3",
         borderRadius: "$3",
       },
       md: {
-        size: "$4",
+        height: "$4",
+        paddingHorizontal: "$4",
         borderRadius: "$4",
       },
       lg: {
-        size: "$5",
+        height: "$5",
+        paddingHorizontal: "$5",
         borderRadius: "$5",
       },
     },
@@ -118,10 +118,13 @@ const ButtonContainer = styled(TamaguiButton, {
       true: {
         opacity: 0.5,
         cursor: "not-allowed",
+        hoverStyle: {
+          opacity: 0.5,
+        },
         pressStyle: {
           opacity: 0.5,
         },
-        hoverStyle: {
+        focusStyle: {
           opacity: 0.5,
         },
       },
@@ -130,40 +133,37 @@ const ButtonContainer = styled(TamaguiButton, {
 
   defaultVariants: {
     variant: "filled",
-    size: "md",
+    buttonSize: "md",
   },
 });
 
 interface ButtonProps {
   children: React.ReactNode;
   variant?: "filled" | "outlined" | "light" | "subtle";
-  size?: "sm" | "md" | "lg";
+  buttonSize?: "sm" | "md" | "lg";
   fullWidth?: boolean;
   disabled?: boolean;
   onPress?: () => void;
-  href?: string;
   asChild?: boolean;
 }
 
 export function Button({
   children,
   variant = "filled",
-  size = "md",
+  buttonSize = "md",
   fullWidth = false,
   disabled = false,
   onPress,
-  href,
   asChild = false,
   ...props
 }: ButtonProps) {
   return (
     <ButtonContainer
       variant={variant}
-      size={size}
+      buttonSize={buttonSize}
       fullWidth={fullWidth}
       disabled={disabled}
       onPress={onPress}
-      href={href}
       asChild={asChild}
       {...props}
     >
