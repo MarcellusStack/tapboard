@@ -2,10 +2,11 @@ import { Link } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { Image } from "react-native";
-import { Paragraph, ScrollView, useTheme, XStack, YStack } from "tamagui";
+import { ScrollView, useTheme, XStack, YStack } from "tamagui";
 import { Badge } from "../components/Badge";
 import { Button } from "../components/Button";
 import { Heading } from "../components/Heading";
+import { Paragraph } from "../components/Paragraph";
 
 export default function HomeScreen() {
   const theme = useTheme();
@@ -55,13 +56,7 @@ export default function HomeScreen() {
           <Heading headingSize="xl" textAlign="center">
             TapBoard
           </Heading>
-          <Paragraph
-            fontSize="$5"
-            color="$color"
-            textAlign="center"
-            lineHeight={24}
-            maxWidth={400}
-          >
+          <Paragraph paragraphSize="lg" textAlign="center" maxWidth={400}>
             Track anything with taps, photos, counts, ratings, and more.
           </Paragraph>
 

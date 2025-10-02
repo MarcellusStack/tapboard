@@ -1,7 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { ScrollView, Text, YStack } from "tamagui";
+import { ScrollView, YStack } from "tamagui";
 import { Heading } from "../components/Heading";
+import { Paragraph } from "../components/Paragraph";
 
 export default function MoreInfoScreen() {
   return (
@@ -35,15 +36,15 @@ export default function MoreInfoScreen() {
                 Implemented
               </Heading>
               <YStack gap="$2">
-                <Text fontSize="$3" color="$green11">
+                <Paragraph paragraphSize="sm" variant="green">
                   • Basic one-tap habit tracking
-                </Text>
-                <Text fontSize="$3" color="$green11">
+                </Paragraph>
+                <Paragraph paragraphSize="sm" variant="green">
                   • Dashboard
-                </Text>
-                <Text fontSize="$3" color="$green11">
+                </Paragraph>
+                <Paragraph paragraphSize="sm" variant="green">
                   • Completely offline functionality with optional sync
-                </Text>
+                </Paragraph>
               </YStack>
             </YStack>
 
@@ -58,39 +59,39 @@ export default function MoreInfoScreen() {
                 Planned
               </Heading>
               <YStack gap="$2">
-                <Text fontSize="$3" color="$yellow11">
+                <Paragraph paragraphSize="sm" color="$yellow11">
                   • Custom tracker themes & colors
-                </Text>
-                <Text fontSize="$3" color="$yellow11">
+                </Paragraph>
+                <Paragraph paragraphSize="sm" color="$yellow11">
                   • Logic like numbers, percentages, progress bars, images
-                </Text>
-                <Text fontSize="$3" color="$yellow11">
+                </Paragraph>
+                <Paragraph paragraphSize="sm" color="$yellow11">
                   • Multiple tracker correlations & optimizations
-                </Text>
-                <Text fontSize="$3" color="$yellow11">
+                </Paragraph>
+                <Paragraph paragraphSize="sm" color="$yellow11">
                   • Export CSV, JSON
-                </Text>
-                <Text fontSize="$3" color="$yellow11">
+                </Paragraph>
+                <Paragraph paragraphSize="sm" color="$yellow11">
                   • Streak reminders & notifications
-                </Text>
-                <Text fontSize="$3" color="$yellow11">
+                </Paragraph>
+                <Paragraph paragraphSize="sm" color="$yellow11">
                   • AI insights
-                </Text>
-                <Text fontSize="$3" color="$yellow11">
+                </Paragraph>
+                <Paragraph paragraphSize="sm" color="$yellow11">
                   • Widgets for home screen
-                </Text>
-                <Text fontSize="$3" color="$yellow11">
+                </Paragraph>
+                <Paragraph paragraphSize="sm" color="$yellow11">
                   • Premium chart types (heatmap, scatter, trend lines)
-                </Text>
-                <Text fontSize="$3" color="$yellow11">
+                </Paragraph>
+                <Paragraph paragraphSize="sm" color="$yellow11">
                   • Time of day heatmap tracking
-                </Text>
-                <Text fontSize="$3" color="$yellow11">
+                </Paragraph>
+                <Paragraph paragraphSize="sm" color="$yellow11">
                   • Online sync
-                </Text>
-                <Text fontSize="$3" color="$yellow11">
+                </Paragraph>
+                <Paragraph paragraphSize="sm" color="$yellow11">
                   • Team mode
-                </Text>
+                </Paragraph>
               </YStack>
             </YStack>
 
@@ -105,22 +106,21 @@ export default function MoreInfoScreen() {
                 In the Future
               </Heading>
               <YStack gap="$2">
-                <Text fontSize="$3" color="$white11">
+                <Paragraph paragraphSize="sm" variant="dimmed">
                   • Advanced AI-powered habit recommendations
-                </Text>
-                <Text fontSize="$3" color="$white11">
+                </Paragraph>
+                <Paragraph paragraphSize="sm" variant="dimmed">
                   • Integration with health apps & wearables
-                </Text>
-                <Text fontSize="$3" color="$white11">
+                </Paragraph>
+                <Paragraph paragraphSize="sm" variant="dimmed">
                   • achievement system
-                </Text>
-                <Text fontSize="$3" color="$white11">
+                </Paragraph>
+                <Paragraph paragraphSize="sm" variant="dimmed">
                   • Advanced analytics & machine learning insights
-                </Text>
-
-                <Text fontSize="$3" color="$white11">
+                </Paragraph>
+                <Paragraph paragraphSize="sm" variant="dimmed">
                   • Voice commands & accessibility features
-                </Text>
+                </Paragraph>
               </YStack>
             </YStack>
           </YStack>
