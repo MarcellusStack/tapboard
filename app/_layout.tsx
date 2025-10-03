@@ -13,10 +13,13 @@ import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import "react-native-reanimated";
+import "../polyfills";
 
 import { useColorScheme } from "@/components/useColorScheme";
+import { Providers } from "@/providers/providers";
 import { tamaguiConfig } from "@/tamagui.config";
 import { TamaguiProvider } from "tamagui";
+import { useIsAuthenticated } from "jazz-tools/expo";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -55,11 +58,16 @@ export default function RootLayout() {
     return null;
   }
 
-  return <RootLayoutNav />;
+  return (
+    <Providers>
+      <RootLayoutNav />
+    </Providers>
+  );
 }
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
+  const isAuthenticated = useIsAuthenticated();
 
   return (
     <TamaguiProvider config={tamaguiConfig} defaultTheme={colorScheme!}>

@@ -1,8 +1,14 @@
+import { AuthButton } from "@/components/auth-button";
 import { Link } from "expo-router";
 import { StyleSheet } from "react-native";
 
 export default function TabOneScreen() {
-  return <Link href="/">Click Me</Link>;
+  return (
+    <>
+      <AuthButton />
+      <Link href="/">Back to home</Link>
+    </>
+  );
 }
 
 const styles = StyleSheet.create({
